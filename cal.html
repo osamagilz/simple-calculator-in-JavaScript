@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Osama Gill</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+	<style>
+	.main-btn{
+			position: relative;
+			left: 50px;
+			margin: 2px;
+				
+		}
+		.bton{
+			margin: 2px;
+			font-size: 2.5em;
+		min-width: 55px;
+		}
+		input{
+			width: 280px;;
+			height: 60px ;
+			background: #000;
+			position: relative;
+			text-align: right;
+			
+			vertical-align: bottom;
+			font-size: 18px;
+			top: 20px;
+			left: 10%;
+			padding: 20px;
+			border-radius: 5px;
+			margin: 6px;
+			color: #fff;
+		}
+		.clr{
+			background: #777777;
+			color: #fff;
+		}
+
+	
+	
+	
+	</style>
+	
+	
+	
+	
+
+<body>
+	<main>
+	<section class="container">
+		<br><br>
+				  <div class="row text-center">
+		    <div class="col-lg-4"></div>
+					  <div class="col-lg-4"><h1 class="display-3">Calculator</h1></div>
+		    <div class="col-lg-4"></div>
+	      </div>
+		
+		 <div class="col-lg-4"></div>
+					  <div class="col-lg-4">
+
+  <div class="card">
+    
+	  <div><input type="text" id="dis" disabled  />  </div>
+	  
+      <div class="card-body">
+      <p class="card-text"><div class="main-btn">
+		<button class="btn btn-light bton clr" onClick="clr()" value="AC" style="width: 116px;background: #000; color: #fff">AC</button>
+		
+		<button class="btn btn-light bton clr" onClick="dis('%')" value="%">%</button>
+		<button class="btn btn-light bton clr" onClick="dis('/')" value="/">/</button><br>
+		<button class="btn btn-light bton" onClick="dis('7')" value="7">7</button>
+		<button class="btn btn-light bton" onClick="dis('8')" value="8">8</button>
+		<button class="btn btn-light bton" onClick="dis('9')" value="9">9</button>
+		<button class="btn btn-light bton clr" onClick="dis('*')" value="*">x</button><br>
+		<button class="btn btn-light bton" onClick="dis('4')" value="4">4</button>
+		<button class="btn btn-light bton" onClick="dis('5')" value="5">5</button>
+		<button class="btn btn-light bton" onClick="dis('6')" value="6">6</button>
+		<button class="btn btn-light bton clr" onClick="dis('-')" value="-">-</button><br>
+		<button class="btn btn-light bton" onClick="dis('1')" value="1">1</button>
+		<button class="btn btn-light bton" onClick="dis('2')" value="2">2</button>
+		<button class="btn btn-light bton" onClick="dis('3')" value="3">3</button>
+		<button class="btn btn-light bton clr" onClick="dis('+')" value="+">+</button><br>
+		<button class="btn btn-light bton" onClick="dis('0')" value="0" style="width: 116px;background: #000; color: #fff">0</button>
+		
+		<button class="btn btn-light bton" onClick="dis('.')" value=".">.</button>
+		<button class="btn btn-light bton clr" onClick="solve()" value="=">=</button><br>
+		
+	  </div>
+  </p>
+		<p class="card-text"><small class="text-muted">This Calculator developed by <b>Osama Gill</b></small></p>
+    </div>
+		
+			
+
+		</div>
+		    <div class="col-lg-4"></div>
+	      </div>
+		
+		
+		
+		
+		</div>
+		
+		
+		
+		
+		
+	  </section>
+	
+	
+	
+	
+	
+	</main>
+	
+	
+	
+		<script>
+
+			
+			//function for displaying values
+		function dis(val)
+		{
+		document.getElementById("dis").value+=val;
+		 }
+		//function for evaluation
+		function solve()
+		{
+		let x = document.getElementById("dis").value
+		let y = eval(x)
+		document.getElementById("dis").value = y;
+		}
+		//function for clearing the display
+		function clr()
+		{
+		document.getElementById("dis").value = "";
+		}
+		</script>
+		
+		
+	
+	
+	
+	
+</body>
+</html>
